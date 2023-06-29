@@ -31,7 +31,7 @@ Content Editor File Manager is a Python application designed to automatically or
 
 ## Code Description
 
-1. main.py
+1. **main.py**
 
 - `Observer` and `FileMover` classes from the Watchdog library: These classes are used to monitor a specified directory (`source_dir`) for any file modifications and perform actions accordingly.
 - `start_timer` method: This method of the `FileMover` class is responsible for starting a timer to check for activity timeout.
@@ -43,7 +43,7 @@ To use the code, follow these steps:
 - The script will start monitoring the `source_dir` for any modifications and move files to the appropriate destination directories based on their extensions.
 - It will also start a timer to check for activity timeout. If no file movement occurs within the specified timeout, the program will exit.
 
-2. filemover.py
+2. **filemover.py**
 
 - `FileMover` class: This class extends the `FileSystemEventHandler` from the Watchdog library and handles file events such as modifications. It contains methods to check the file type and move it to the appropriate destination folder.
 - Destination Folders: The code defines several destination folders (`dest_dir_sfx`, `dest_dir_music`, etc.) where files of specific types will be moved.
@@ -52,7 +52,7 @@ To use the code, follow these steps:
 - Logging: The code utilizes the Python `logging` module to log file movements and other relevant information.
 - Timer and Timeout: The code includes a timer functionality that triggers a timeout if no files are moved within a specified period. This helps in gracefully exiting the program.
 
-2. utils.py
+2. **utils.py**
 
 - `start_timer` function: This function takes a `file_mover` object as an argument and calls its `start_timer` method. It is used to start a timer that triggers a specified function after a certain duration.
 - `check_activity_timeout` function: This function takes a `file_mover` object as an argument and calls its `check_activity_timeout` method. It is used to check if any activity has occurred within a specific timeframe and take appropriate action.
